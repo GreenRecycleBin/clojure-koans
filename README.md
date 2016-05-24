@@ -8,7 +8,7 @@ making tests pass!
 ### Getting Started
 
 The easiest and fastest way to get the koans up and running is to [download the
-latest zip file from Github](https://github.com/functional-koans/clojure-koans/downloads).
+latest zip file from Github](https://github.com/functional-koans/clojure-koans/releases).
 This way, you'll have all the dependencies you need, including Clojure itself
 and JLine, and you can skip the rest of this section (skip to "Running the
 Koans").
@@ -22,8 +22,8 @@ exercises you've already completed.
 
 The only things you'll need to run the Clojure Koans are:
 
-- JRE 1.5 or higher
-- [clojure-1.5.1.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.5.1/clojure-1.5.1.zip)
+- JRE 1.6 or higher
+- [clojure-1.8.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.zip)
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also

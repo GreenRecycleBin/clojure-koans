@@ -1,4 +1,4 @@
-(ns koans.05-maps
+(ns koans.06-maps
   (:require [koan-engine.core :refer :all]))
 
 (meditations
@@ -21,7 +21,7 @@
   (= 1 (:a {:a 1 :b 2}))
 
   "But map keys need not be keywords"
-  (= "Vancouver" ({2006 "Torino" 2010 "Vancouver" 2014 "Sochi"} 2010))
+  (= __ ({2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"} 2014))
 
   "You may not be able to find an entry for a key"
   (= nil (get {:a 1 :b 2} :c))
@@ -42,9 +42,9 @@
   (= {1 "January"} (dissoc {1 "January" 2 "February"} 2))
 
   "Often you will need to get the keys, but the order is undependable"
-  (= (list 2006 2010 2014)
-     (sort (keys {2010 "Vancouver" 2014 "Sochi" 2006 "Torino"})))
+  (= (list __ __ __)
+     (sort (keys { 2014 "Sochi" 2018 "PyeongChang" 2010 "Vancouver"})))
 
   "You can get the values in a similar way"
-  (= (list "Sochi" "Torino" "Vancouver")
-     (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
+  (= (list __ __ __)
+     (sort (vals {2010 "Vancouver" 2014 "Sochi" 2018 "PyeongChang"}))))

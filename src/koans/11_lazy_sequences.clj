@@ -1,4 +1,4 @@
-(ns koans.10-lazy-sequences
+(ns koans.11-lazy-sequences
   (:require [koan-engine.core :refer :all]))
 
 (meditations
@@ -20,9 +20,9 @@
   (= (range 20) (take 20 (iterate inc 0)))
 
   "Repetition is key"
-  (= [:a :a :a :a :a :a :a :a :a :a ]
-     (repeat 10 :a))
+  (= [:a :a :a :a :a :a :a :a :a :a]
+     (repeat 10 __))
 
   "Iteration can be used for repetition"
-  (= (repeat 100 :foo)
-     (take 100 (iterate identity :foo))))
+  (= (repeat 100 :hello)
+     (take 100 (iterate ___ :hello))))
