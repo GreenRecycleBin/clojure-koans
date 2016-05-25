@@ -1,5 +1,6 @@
 (ns koans.15-destructuring
-  (:require [koan-engine.core :refer :all]))
+  (:require [koan-engine.core :refer :all]
+            [clojure.string :as str]))
 
 (def test-address
   {:street-address "123 Test Lane"
@@ -15,14 +16,17 @@
   (= (str "An Oxford comma list of apples, "
           "oranges, "
           "and pears.")
-     ((fn [[a b c]] __)
+     ((fn [[a b c]]
+        (format (str "An Oxford comma list of %s, "
+              "%s, "
+              "and %s.") a b c))
       ["apples" "oranges" "pears"]))
 
   "Or in let expressions"
   (= "Rich Hickey aka The Clojurer aka Go Time aka Lambda Guru"
      (let [[first-name last-name & aliases]
            (list "Rich" "Hickey" "The Clojurer" "Go Time" "Lambda Guru")]
-       __))
+       (str/join " aka " (into [(str first-name " " last-name)] aliases))))
 
   "You can regain the full argument if you like arguing"
   (= {:original-parts ["Stephen" "Hawking"] :named-parts {:first "Stephen" :last "Hawking"}}
